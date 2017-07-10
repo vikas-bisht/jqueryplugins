@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="nivo-slider.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="default/default.css" media="screen">
+		<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="jquery.nivo.slider.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="slider-wrapper theme-default">
+				<div id="slider" class="nivoSlider">
+					<img class="img" src="3.jpg" data-thumb="3.jpg" alt=""/>
+					<img class="img" src="up.jpg" data-thumb="up.jpg" alt=""/>
+					<img class="img" src="1.jpg" data-thumb="1.jpg" alt=""/>
+					<img class="img" src="walle.jpg" data-thumb="walle.jpg" alt=""/>	
+					<img class="img" src="toystory.jpg" data-thumb="toystory.jpg" alt=""/>
+					<img class="img" src="nemo.jpg" data-thumb="nemo.jpg" alt=""/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(window).on('load', function(){
+		$('#slider').nivoSlider({
+			effect:'random',
+
+		});
+	});
+</script>
