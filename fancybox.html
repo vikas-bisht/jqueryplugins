@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"</script>
+		<script type="text/javascript" src="jquery.mousewheel.pack.js"></script>
+		<script type="text/javascript" src="jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.fancybox.css" media="screen">
+		<script type="text/javascript" src="jquery.fancybox-buttons.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.fancybox-buttons.css">
+		<style type="text/css">
+			.fancy-title-over-wrap
+				{
+					width: 100%;
+				}
+			.fancy-title-over-wrap > div
+				{
+					padding: 10px;
+				}
+		</style>
+	</head>
+	<body>
+		<a class="fancybox" href="1_b.jpg" data-fancybox-group="gallery" title="slide1"><img src="1_s.jpg" alt="" /></a>
+		<a class="fancybox" href="2_b.jpg" data-fancybox-group="gallery" title="slide2"><img src="2_s.jpg" alt="" /></a>
+		<a class="fancybox" href="3_b.jpg" data-fancybox-group="gallery" title="slide3"><img src="3_s.jpg" alt="" /></a>
+		<a class="fancybox" href="4_b.jpg" data-fancybox-group="gallery" title="slide4"><img src="4_s.jpg" alt="" /></a>
+		<a class="fancybox" href="5_b.jpg" data-fancybox-group="gallery" title="slide5"><img src="5_s.jpg" alt="" /></a>
+	</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".fancybox").fancybox({
+			afterShow:function(){
+				$(".fancy-title").wrapInner('<div />').show();
+				$(".fancybox-wrap").hover(function() {
+       		    	$(".fancybox-title").show();
+      			}, function() {
+            		$(".fancybox-title").hide();
+    	   		});
+			},
+			helpers:{
+				title:{
+					type:'over'
+				},
+				overlay:{
+					css:{
+						'background':'rgba(58,42,45,0.95)'
+					}
+				}
+			}
+		});
+	});
+</script>
